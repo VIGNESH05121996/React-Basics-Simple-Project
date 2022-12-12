@@ -1,4 +1,4 @@
-.whole-container {
+.temp-whole-container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -30,7 +30,7 @@
   transition: background 1.5s;
 }
 
-button {
+.temp-button {
   width: 80px;
   height: 80px;
   border-radius: 50%;

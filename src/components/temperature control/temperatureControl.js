@@ -22,14 +22,14 @@ const TemperatureControl = () => {
   };
 
   return (
-    <div className="whole-container">
+    <div className="temp-whole-container">
       <div className="temperature-container">
         <div className={`display-degree ${temperatureColor}`}>
           {temperatureValue}°C
         </div>
         <div className="button-container">
-          <button onClick={() => increaseTemperature()}>+</button>
-          <button onClick={() => decreaseTemperature()}>-</button>
+          <button className="temp-button" onClick={() => increaseTemperature()}>+</button>
+          <button className="temp-button" onClick={() => decreaseTemperature()}>-</button>
         </div>
       </div>
     </div>

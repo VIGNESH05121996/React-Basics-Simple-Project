@@ -5,8 +5,9 @@ import { useState } from "react";
 function SearchFilter() {
   const [searchTerm, setSearchTerm] = useState("");
   return (
-    <div className="whole-container">
+    <div className="search-whole-container">
       <input
+        className="search-input"
         type="text"
         placeholder="Search...."
         onChange={(event) => setSearchTerm(event.target.value)}
