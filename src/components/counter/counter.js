@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import './counter.css'
-
 class Counter extends Component {
   constructor(props) {
     super(props);
@@ -32,4 +31,4 @@ class Counter extends Component {
   }
 }
 
-export default Counter;
+export default Counter

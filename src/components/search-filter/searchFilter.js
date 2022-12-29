@@ -1,11 +1,20 @@
 import "./searchFilter.css";
 import JSONDATA from "./MOCK_DATA.json";
 import { useState } from "react";
+import { useNavigate } from "react-router";
 
 function SearchFilter() {
   const [searchTerm, setSearchTerm] = useState("");
+  const navigate = useNavigate();
   return (
     <div className="search-whole-container">
+      <div className="backButton"
+        onClick={() => {
+          navigate("/");
+        }}
+      >
+        Back
+      </div>
       <input
         className="search-input"
         type="text"
@@ -31,4 +40,4 @@ function SearchFilter() {
   );
 }
 
-export default SearchFilter;
+export default SearchFilter

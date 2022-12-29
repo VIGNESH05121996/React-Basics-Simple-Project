@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./registration.css";
+import { useNavigate } from "react-router";
 
 function Registration() {
   const [formValues, setFormValues] = useState({
@@ -32,8 +33,17 @@ function Registration() {
     setSubmitter(true);
   };
 
+  const navigate = useNavigate();
+
   return (
     <div className="register-whole-container">
+      <div className="backButton"
+        onClick={() => {
+          navigate("/");
+        }}
+      >
+        Back
+      </div>
       <form className="register-form" onSubmit={handleSubmit}>
         {submitted && valid ? (
           <div className="submitted-register-form">

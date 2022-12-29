@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import "./temperatureControl.css";
+import { useNavigate } from "react-router";
 
-const TemperatureControl = () => {
+export const TemperatureControl = () => {
   const [temperatureValue, setTemperatureValue] = useState(10);
   const [temperatureColor, setTemperatureColor] = useState("cold");
+  const navigate = useNavigate();
 
   const increaseTemperature = () => {
     const newTemperatureValue = temperatureValue + 1;
@@ -23,6 +25,13 @@ const TemperatureControl = () => {
 
   return (
     <div className="temp-whole-container">
+       <div className="backButton"
+        onClick={() => {
+          navigate("/");
+        }}
+      >
+        Back
+      </div>
       <div className="temperature-container">
         <div className={`display-degree ${temperatureColor}`}>
           {temperatureValue}°C
@@ -36,4 +45,3 @@ const TemperatureControl = () => {
   );
 };
 
-export default TemperatureControl;

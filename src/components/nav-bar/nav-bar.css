@@ -1,0 +1,11 @@
+.nav-buttons{
+   width: 200px;
+   height: 300px;
+   margin-right: 100px;
+   border-radius: 5px;
+   border: none;
+   background-color: coral;
+   font-weight: bold;
+   margin-top: 150px;
+   cursor: pointer;
+}
